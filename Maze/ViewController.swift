@@ -51,20 +51,20 @@ class ViewController: UIViewController {
             for x in 0 ..< maze[y].count{
                 switch maze[y][x]{
                 case 1:
-                    let wallView = createView(x: x, Y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
+                    let wallView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
                         
                     wallView.backgroundColor = UIColor.black
                     view.addSubview(wallView)
                     wallRectArray.append(wallView.frame)
                     
                 case 2:
-                    startView = createView(x: x, Y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
+                    startView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
                     
                     startView.backgroundColor = UIColor.green
                     view.addSubview(startView)
                     
                 case 3:
-                    goalView = createView(x: x, Y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
+                    goalView = createView(x: x, y: y, width: cellWidth, height: cellHeight, offsetX: cellOffsetX, offsetY: cellOffsetY)
                     
                     goalView.backgroundColor = UIColor.red
                     view.addSubview(goalView)
@@ -88,11 +88,11 @@ class ViewController: UIViewController {
 
     }
     
-    func createView(x: Int, Y: Int, width: CGFloat, height: CGFloat, offsetX: CGFloat, offsetY: CGFloat) -> UIView{
+    func createView(x: Int, y: Int, width: CGFloat, height: CGFloat, offsetX: CGFloat, offsetY: CGFloat) -> UIView{
         let rect = CGRect(x: 0, y: 0, width: width, height: height)
         let view = UIView(frame: rect)
         
-        let center = CGPoint(x: offsetX + width * CGFloat(x), y: offsetY + height * CGFloat(Y))
+        let center = CGPoint(x: offsetX + width * CGFloat(x), y: offsetY + height * CGFloat(y))
 
         view.center = center
         
