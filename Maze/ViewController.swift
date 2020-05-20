@@ -114,15 +114,15 @@ class ViewController: UIViewController {
                 self.speedX = 0
                 posX = self.playerView.frame.width / 2
             }
-            if posY <= self.playerView.frame.width / 2{
+            if posY <= self.playerView.frame.height / 2{
                 self.speedX = 0
-                posY = self.playerView.frame.width / 2
+                posY = self.playerView.frame.height / 2
             }
-            if posX <= self.screenSize.width - (self.playerView.frame.width / 2){
+            if posX >= self.screenSize.width - (self.playerView.frame.width / 2){
             self.speedX = 0
             posX = self.screenSize.width - (self.playerView.frame.width / 2)
             }
-            if posY <= self.screenSize.height - (self.playerView.frame.height / 2){
+            if posY >= self.screenSize.height - (self.playerView.frame.height / 2){
                    self.speedY = 0
                    posY = self.screenSize.height - (self.playerView.frame.height / 2)
             }
