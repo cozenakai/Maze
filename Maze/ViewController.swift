@@ -108,7 +108,7 @@ class ViewController: UIViewController {
             self.speedY += CMAccelerometerData!.acceleration.y
             
             var posX = self.playerView.center.x + (CGFloat(self.speedX) / 3)
-            var posY = self.playerView.center.y + (CGFloat(self.speedY) / 3)
+            var posY = self.playerView.center.y - (CGFloat(self.speedY) / 3)
             
             if posX <= self.playerView.frame.width / 2{
                 self.speedX = 0
